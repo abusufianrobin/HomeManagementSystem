@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="569.0" prefWidth="673.0" type="AnchorPane" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.HelloController">
+   <children>
+      <MenuBar layoutY="-5.0" prefHeight="40.0" prefWidth="719.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-5.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem fx:id="exit" disable="true" mnemonicParsing="false" onAction="#exitProgram" text="EXIT" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.2857142857142857" layoutX="7.0" layoutY="25.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="28.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="562.0" prefWidth="179.0">
+               <children>
+                  <ListView layoutX="-5.0" layoutY="297.0" prefHeight="562.0" prefWidth="207.0" style="-fx-background-color: #1B1C4C;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Show" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </ListView>
+                  <Button layoutX="7.0" layoutY="14.0" minHeight="16.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="133.0" style="-fx-background-color: #1B1C4C;" text="Dashboard">
+                     <graphic>
+                        <ImageView fitHeight="79.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Dashboard.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutX="7.0" layoutY="85.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="133.0" style="-fx-background-color: #1B1C4C;" text="Apartment">
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Apartment.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutX="2.0" layoutY="160.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="133.0" style="-fx-background-color: #1B1C4C;" text="Rental List">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../RentalList.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutX="3.0" layoutY="227.0" mnemonicParsing="false" style="-fx-background-color: #1B1C4C;" text="Rent Collection">
+                     <graphic>
+                        <ImageView fitHeight="47.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../RentCollection.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutX="-6.0" layoutY="427.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="133.0" style="-fx-background-color: #1B1C4C;" text="Report">
+                     <graphic>
+                        <ImageView fitHeight="96.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Report.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutX="-6.0" layoutY="489.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="120.0" style="-fx-background-color: #1B1C4C;" text="Settings">
+                     <graphic>
+                        <ImageView fitHeight="114.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+                  <Button layoutX="4.0" layoutY="299.0" mnemonicParsing="false" style="-fx-background-color: #1B1C4C;" text="Employee">
+                     <graphic>
+                        <ImageView fitHeight="90.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Employee.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="3.0" layoutY="361.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="142.0" style="-fx-background-color: #1B1C4C;" text="Maintainence">
+                     <graphic>
+                        <ImageView fitHeight="61.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Mainta.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="575.0" prefWidth="534.0" style="-fx-background-color: #BBBBBB;">
+               <children>
+                  <Text layoutX="9.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Apartment" textAlignment="CENTER">
+                     <font>
+                        <Font name="Cambria" size="39.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Text>
+                  <DatePicker layoutX="2.0" layoutY="70.0" promptText="Date" style="-fx-background-color: #FFFFFF;" />
+                  <Circle fill="#f5f1ec" layoutX="439.0" layoutY="36.0" radius="23.0" stroke="BLACK" strokeType="INSIDE" />
+                  <TextField layoutX="274.0" layoutY="23.0" prefHeight="26.0" prefWidth="133.0" style="-fx-background-color: #FFFFFF;" text="Login/Register" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1e1e1" height="161.0" layoutX="9.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" width="180.0" />
+                  <ImageView fitHeight="75.0" fitWidth="80.0" layoutX="65.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../download.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="26.0" fitWidth="46.0" layoutX="140.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../Tik.png" />
+                     </image>
+                  </ImageView>
+                  <TextField layoutX="28.0" layoutY="177.0" promptText="Flat No." style="-fx-background-color: FFFFFF;" />
+                  <Button layoutX="14.0" layoutY="495.0" mnemonicParsing="false" style="-fx-background-color: #1B1C4C;" text="Back">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="389.0" layoutY="495.0" mnemonicParsing="false" style="-fx-background-color: #1B1C4C;" text="Next" />
+               </children>
+               <effect>
+                  <Reflection />
+               </effect>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</fx:root>
